@@ -5,48 +5,18 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"strings"
+	"scales/models"
+	"scales/representations"
 )
 
 var (
-	MajorScales        []Scale
-	NaturalMinorScales []Scale
+	majorScales         []models.Scale
+	naturalMinorScales  []models.Scale
+/*
+	harmonicMinorScales []models.Scale
+	melodicMinorScales  []models.Scale
+*/
 )
-
-type Scale struct {
-	Fundamental string `json: fundamental`
-	Type        string `json: type`
-	Notes       string `json: notes`
-}
-
-func NewScale(fundamental, scaleType, notes string) Scale {
-	return Scale{
-		Fundamental: fundamental,
-		Type:        scaleType,
-		Notes:       notes,
-	}
-}
-
-func (s *Scale) CheckNotes(notes []string) {
-	notesFound := 0
-
-	for _, testNote := range notes {
-		for _, scaleNote := range strings.Split(s.Notes, " ") {
-			if strings.Compare(scaleNote, testNote) == 0 {
-				notesFound++
-				break
-			}
-		}
-	}
-
-	if notesFound == len(notes) {
-		s.print()
-	}
-}
-
-func (s *Scale) print() {
-	fmt.Printf("%v %v: %v\n", s.Fundamental, s.Type, s.Notes)
-}
 
 func initScales() {
 	configFile, err := os.Open("config.json")
@@ -55,7 +25,7 @@ func initScales() {
 	}
 
 	decoder := json.NewDecoder(configFile)
-	scales := []Scale{}
+	scales := []representations.Scale{}
 	err = decoder.Decode(&scales)
 	if err != nil {
 		log.Fatal(err)
@@ -64,9 +34,15 @@ func initScales() {
 	for _, scale := range scales {
 		switch scale.Type {
 		case "Major":
-			MajorScales = append(MajorScales, scale)
+			majorScales = append(majorScales, models.NewScaleFromRepresentation(scale))
 		case "Natural Minor":
-			NaturalMinorScales = append(NaturalMinorScales, scale)
+			naturalMinorScales = append(naturalMinorScales, models.NewScaleFromRepresentation(scale))
+/*
+		case "Harmonic Minor":
+			harmonicMinorScales = append(harmonicMinorScales, models.NewScaleFromRepresentation(scale))
+		case "Melodic Minor":
+			melodicMinorScales = append(melodicMinorScales, models.NewScaleFromRepresentation(scale))
+*/
 		}
 	}
 }
@@ -79,12 +55,23 @@ func main() {
 	initScales()
 
 	fmt.Println("--- Major Scales ---")
-	for _, scale := range MajorScales {
+	for _, scale := range majorScales {
 		scale.CheckNotes(os.Args[1:])
 	}
 
 	fmt.Println("--- Natural Minor Scales ---")
-	for _, scale := range NaturalMinorScales {
+	for _, scale := range naturalMinorScales {
 		scale.CheckNotes(os.Args[1:])
 	}
+	/*
+		fmt.Println("--- Harmonic Minor Scales ---")
+		for _, scale := range harmonicMinorScales {
+			scale.CheckNotes(os.Args[1:])
+		}
+
+		fmt.Println("--- Melodic Minor Scales ---")
+		for _, scale := range melodicMinorScales {
+			scale.CheckNotes(os.Args[1:])
+		}
+	*/
 }

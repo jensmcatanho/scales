@@ -78,7 +78,7 @@
     {
         "fundamental": "C",
         "type": "Natural Minor",
-        "notes": "C D Eb F G Ab B"
+        "notes": "C D Eb F G Ab Bb"
     },
     {
         "fundamental": "C#",
@@ -146,7 +146,7 @@
         "notes": "Bb C Db Eb F Gb Ab"
     },
     {
-        "fundamental": "A#",
+        "fundamental": "B",
         "type": "Natural Minor",
         "notes": "B C# D E F# G A"
     }
