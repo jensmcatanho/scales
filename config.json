@@ -1,0 +1,153 @@
+[
+    {
+        "fundamental": "Cb",
+        "type": "Major",
+        "notes": "Cb Db Eb Fb Gb Ab B"
+    },
+    {
+        "fundamental": "C",
+        "type": "Major",
+        "notes": "C D E F G A B"
+    },
+    {
+        "fundamental": "C#",
+        "type": "Major",
+        "notes": "C# D# E# F# G# A# B"
+    },
+    {
+        "fundamental": "Db",
+        "type": "Major",
+        "notes": "Db Eb F Gb Ab Bb C"
+    },
+    {
+        "fundamental": "D",
+        "type": "Major",
+        "notes": "D E F# G A B C#"
+    },
+    {
+        "fundamental": "Eb",
+        "type": "Major",
+        "notes": "Eb F G Ab Bb C D"
+    },
+    {
+        "fundamental": "E",
+        "type": "Major",
+        "notes": "E F# G# A B C D#"
+    },
+    {
+        "fundamental": "F",
+        "type": "Major",
+        "notes": "F G A Bb C D E"
+    },
+    {
+        "fundamental": "F#",
+        "type": "Major",
+        "notes": "F# G# A# B C# D# E#"
+    },
+    {
+        "fundamental": "Gb",
+        "type": "Major",
+        "notes": "Gb Ab Bb Cb Db Eb F"
+    },
+    {
+        "fundamental": "G",
+        "type": "Major",
+        "notes": "G A B C D E F#"
+    },
+    {
+        "fundamental": "Ab",
+        "type": "Major",
+        "notes": "Ab Bb C Db Eb F G"
+    },
+    {
+        "fundamental": "A",
+        "type": "Major",
+        "notes": "A B C# D E F# G#"
+    },
+    {
+        "fundamental": "Bb",
+        "type": "Major",
+        "notes": "Bb C D Eb F G A"
+    },
+    {
+        "fundamental": "B",
+        "type": "Major",
+        "notes": "B C# D# E F# G# A#"
+    },
+
+    {
+        "fundamental": "C",
+        "type": "Natural Minor",
+        "notes": "C D Eb F G Ab B"
+    },
+    {
+        "fundamental": "C#",
+        "type": "Natural Minor",
+        "notes": "C# D# E F# G# A B"
+    },
+    {
+        "fundamental": "D",
+        "type": "Natural Minor",
+        "notes": "D E F G A Bb C"
+    },
+    {
+        "fundamental": "D#",
+        "type": "Natural Minor",
+        "notes": "D# E# F# G# A# B C#"
+    },
+    {
+        "fundamental": "Eb",
+        "type": "Natural Minor",
+        "notes": "Eb F Gb Ab Bb Cb Db"
+    },
+    {
+        "fundamental": "E",
+        "type": "Natural Minor",
+        "notes": "E F# G A B C D"
+    },
+    {
+        "fundamental": "F",
+        "type": "Natural Minor",
+        "notes": "F G Ab Bb C Db Eb"
+    },
+    {
+        "fundamental": "F#",
+        "type": "Natural Minor",
+        "notes": "F# G# A B C# D E"
+    },
+    {
+        "fundamental": "G",
+        "type": "Natural Minor",
+        "notes": "G A Bb C D Eb F"
+    },
+    {
+        "fundamental": "G#",
+        "type": "Natural Minor",
+        "notes": "G# A# B C# D# E F#"
+    },
+    {
+        "fundamental": "Ab",
+        "type": "Natural Minor",
+        "notes": "Ab Bb Cb Db Eb Fb Gb"
+    },
+    {
+        "fundamental": "A",
+        "type": "Natural Minor",
+        "notes": "A B C D E F G"
+    },
+    {
+        "fundamental": "A#",
+        "type": "Natural Minor",
+        "notes": "A# B# C# D# E# F# G#"
+    },
+    {
+        "fundamental": "Bb",
+        "type": "Natural Minor",
+        "notes": "Bb C Db Eb F Gb Ab"
+    },
+    {
+        "fundamental": "A#",
+        "type": "Natural Minor",
+        "notes": "B C# D E F# G A"
+    }
+]
