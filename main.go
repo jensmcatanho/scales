@@ -51,10 +51,6 @@ func initScales() {
 }
 
 func main() {
-	if len(os.Args) < 2 {
-		log.Fatal("Invalid number of arguments.")
-	}
-
 	initScales()
 
 	app := cli.NewApp()
@@ -90,19 +86,23 @@ func main() {
 			
 			return nil
 
-		} else {
-			fmt.Println("--- Major Scales ---")
-			for _, scale := range majorScales {
-				scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
-			}
-		
-			fmt.Println("--- Natural Minor Scales ---")
-			for _, scale := range naturalMinorScales {
-				scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
-			}
-			
+		} else if len(c.Args()) < 1 {
+			cli.ShowAppHelp(c)
 			return nil
+
 		}
+
+		fmt.Println("--- Major Scales ---")
+		for _, scale := range majorScales {
+			scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
+		}
+	
+		fmt.Println("--- Natural Minor Scales ---")
+		for _, scale := range naturalMinorScales {
+			scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
+		}
+		
+		return nil
 	}
 
 	app.Run(os.Args)
