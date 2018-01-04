@@ -16,8 +16,6 @@ func enharmonic(note string) string {
 	switch note {
 	case "Cb":
 		return "B"
-	case "C":
-		return "B#"
 	case "C#":
 		return "Db"
 	case "Db":
@@ -26,12 +24,8 @@ func enharmonic(note string) string {
 		return "Eb"
 	case "Eb":
 		return "D#"
-	case "E":
-		return "Fb"
 	case "E#":
 		return "F"
-	case "F":
-		return "E#"
 	case "F#":
 		return "Gb"
 	case "Gb":
@@ -44,8 +38,6 @@ func enharmonic(note string) string {
 		return "Bb"
 	case "Bb":
 		return "A#"
-	case "B":
-		return "Cb"
 	case "B#":
 		return "C"
 	}

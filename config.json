@@ -2,7 +2,7 @@
     {
         "fundamental": "Cb",
         "type": "Major",
-        "notes": "Cb Db Eb Fb Gb Ab B"
+        "notes": "Cb Db Eb Fb Gb Ab Bb"
     },
     {
         "fundamental": "C",
@@ -12,7 +12,7 @@
     {
         "fundamental": "C#",
         "type": "Major",
-        "notes": "C# D# E# F# G# A# B"
+        "notes": "C# D# E# F# G# A# B#"
     },
     {
         "fundamental": "Db",

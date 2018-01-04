@@ -26,7 +26,7 @@ func NewScaleFromRepresentation(scaleRepresentation representations.Scale) Scale
 	}
 }
 
-func (s *Scale) CheckNotes(notes []string) {
+func (s *Scale) CheckNotes(notes []string, enharmonic bool) {
 	notesFound := 0
 
 	for _, testNote := range notes {
@@ -39,16 +39,25 @@ func (s *Scale) CheckNotes(notes []string) {
 	}
 
 	if notesFound == len(notes) {
-		s.print()
+		s.print(enharmonic)
 	}
 }
 
-func (s *Scale) print() {
-	fmt.Printf("%v %v:", s.Fundamental, s.Type,)
+func (s *Scale) print(enharmonic bool) {
+	fmt.Printf("%v %v:", s.Fundamental, s.Type)
 
 	for _, note := range s.Notes {
-		fmt.Printf(" %v", note.Name)
+		if enharmonic {
+			if len(note.Enharmonic) > 0 {
+				fmt.Printf(" %v/%v", note.Name, note.Enharmonic)
+			} else {
+				fmt.Printf(" %v", note.Name)
+			}
+
+		} else {
+			fmt.Printf(" %v", note.Name)
+		}
 	}
 
-	fmt.Println()
+	fmt.Println("\n")
 }

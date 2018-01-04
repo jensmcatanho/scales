@@ -67,13 +67,17 @@ func main() {
 			Name: "min, m",
 			Usage: "list only the natural minor scales",
 		},
+		cli.BoolFlag{
+			Name: "enharmonic, e",
+			Usage: "list notes from the scales with their enharmonics",
+		},
 	}
 	
 	app.Action = func(c *cli.Context) error {
 		if c.Bool("maj") {
 			fmt.Println("--- Major Scales ---")
 			for _, scale := range majorScales {
-				scale.CheckNotes(c.Args()[1:])
+				scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
 			}
 
 			return nil
@@ -81,7 +85,7 @@ func main() {
 		} else if c.Bool("min") {
 			fmt.Println("--- Natural Minor Scales ---")
 			for _, scale := range naturalMinorScales {
-				scale.CheckNotes(c.Args()[1:])
+				scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
 			}
 			
 			return nil
@@ -89,12 +93,12 @@ func main() {
 		} else {
 			fmt.Println("--- Major Scales ---")
 			for _, scale := range majorScales {
-				scale.CheckNotes(c.Args()[1:])
+				scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
 			}
 		
 			fmt.Println("--- Natural Minor Scales ---")
 			for _, scale := range naturalMinorScales {
-				scale.CheckNotes(c.Args()[1:])
+				scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
 			}
 			
 			return nil
