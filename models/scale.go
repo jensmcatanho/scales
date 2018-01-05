@@ -34,6 +34,9 @@ func (s *Scale) CheckNotes(notes []string, enharmonic bool) {
 			if strings.Compare(scaleNote.Name, testNote) == 0 {
 				notesFound++
 				break
+			} else if enharmonic && strings.Compare(scaleNote.Enharmonic, testNote) == 0 {
+				notesFound++
+				break
 			}
 		}
 	}
