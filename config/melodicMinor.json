@@ -1,3 +1,77 @@
 [
-    
+    {
+        "fundamental": "C",
+        "type": "Melodic Minor",
+        "notes": "C D Eb F G A B"
+    },
+    {
+        "fundamental": "C#",
+        "type": "Melodic Minor",
+        "notes": "C# D# E F# G# A# B# "
+    },
+    {
+        "fundamental": "D",
+        "type": "Melodic Minor",
+        "notes": "D E F G A B C#"
+    },
+    {
+        "fundamental": "D#",
+        "type": "Melodic Minor",
+        "notes": "D# E# F# G# A# B# C##"
+    },
+    {
+        "fundamental": "Eb",
+        "type": "Melodic Minor",
+        "notes": "Eb F Gb Ab Bb C D"
+    },
+    {
+        "fundamental": "E",
+        "type": "Melodic Minor",
+        "notes": "E F# G A B C# D#"
+    },
+    {
+        "fundamental": "F",
+        "type": "Melodic Minor",
+        "notes": "F G Ab Bb C D E"
+    },
+    {
+        "fundamental": "F#",
+        "type": "Melodic Minor",
+        "notes": "F# G# A B C# D# E#"
+    },
+    {
+        "fundamental": "G",
+        "type": "Melodic Minor",
+        "notes": "G A Bb C D E F#"
+    },
+    {
+        "fundamental": "G#",
+        "type": "Melodic Minor",
+        "notes": "G# A# B C# D# E# F##"
+    },
+    {
+        "fundamental": "Ab",
+        "type": "Melodic Minor",
+        "notes": "Ab Bb Cb Db Eb F G"
+    },
+    {
+        "fundamental": "A",
+        "type": "Melodic Minor",
+        "notes": "A B C D E F# G#"
+    },
+    {
+        "fundamental": "A#",
+        "type": "Melodic Minor",
+        "notes": "A# B# C# D# E# F## G##"
+    },
+    {
+        "fundamental": "Bb",
+        "type": "Melodic Minor",
+        "notes": "Bb C Db Eb F G A"
+    },
+    {
+        "fundamental": "B",
+        "type": "Melodic Minor",
+        "notes": "B C# D E F# G# A#"
+    }
 ]

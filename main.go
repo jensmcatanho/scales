@@ -88,7 +88,7 @@ func main() {
 
 	app.Action = func(c *cli.Context) error {
 		if c.Bool("maj") {
-			fmt.Println("--- Major Scales ---")
+			fmt.Println("--- Major ---")
 			for _, scale := range majorScales {
 				scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
 			}
@@ -96,7 +96,7 @@ func main() {
 			return nil
 
 		} else if c.Bool("min") {
-			fmt.Println("--- Natural Minor Scales ---")
+			fmt.Println("--- Natural Minor ---")
 			for _, scale := range naturalMinorScales {
 				scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
 			}
@@ -109,22 +109,22 @@ func main() {
 
 		}
 
-		fmt.Println("--- Major Scales ---")
+		fmt.Println("--- Major ---")
 		for _, scale := range majorScales {
 			scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
 		}
 
-		fmt.Println("--- Natural Minor Scales ---")
+		fmt.Println("--- Natural Minor ---")
 		for _, scale := range naturalMinorScales {
 			scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
 		}
 
-		fmt.Println("--- Harmonic Minor Scales ---")
+		fmt.Println("--- Harmonic Minor ---")
 		for _, scale := range harmonicMinorScales {
 			scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
 		}
 
-		fmt.Println("--- Melodic Minor Scales ---")
+		fmt.Println("--- Melodic Minor ---")
 		for _, scale := range melodicMinorScales {
 			scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
 		}

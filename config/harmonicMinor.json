@@ -1,3 +1,77 @@
 [
-    
+    {
+        "fundamental": "C",
+        "type": "Harmonic Minor",
+        "notes": "C D Eb F G Ab B"
+    },
+    {
+        "fundamental": "C#",
+        "type": "Harmonic Minor",
+        "notes": "C# D# E F# G# A B# "
+    },
+    {
+        "fundamental": "D",
+        "type": "Harmonic Minor",
+        "notes": "D E F G A Bb C#"
+    },
+    {
+        "fundamental": "D#",
+        "type": "Harmonic Minor",
+        "notes": "D# E# F# G# A# B C##"
+    },
+    {
+        "fundamental": "Eb",
+        "type": "Harmonic Minor",
+        "notes": "Eb F Gb Ab Bb Cb D"
+    },
+    {
+        "fundamental": "E",
+        "type": "Harmonic Minor",
+        "notes": "E F# G A B C D#"
+    },
+    {
+        "fundamental": "F",
+        "type": "Harmonic Minor",
+        "notes": "F G Ab Bb C Db E"
+    },
+    {
+        "fundamental": "F#",
+        "type": "Harmonic Minor",
+        "notes": "F# G# A B C# D E#"
+    },
+    {
+        "fundamental": "G",
+        "type": "Harmonic Minor",
+        "notes": "G A Bb C D Eb F#"
+    },
+    {
+        "fundamental": "G#",
+        "type": "Harmonic Minor",
+        "notes": "G# A# B C# D# E F##"
+    },
+    {
+        "fundamental": "Ab",
+        "type": "Harmonic Minor",
+        "notes": "Ab Bb Cb Db Eb Fb G"
+    },
+    {
+        "fundamental": "A",
+        "type": "Harmonic Minor",
+        "notes": "A B C D E F G#"
+    },
+    {
+        "fundamental": "A#",
+        "type": "Harmonic Minor",
+        "notes": "A# B# C# D# E# F# G##"
+    },
+    {
+        "fundamental": "Bb",
+        "type": "Harmonic Minor",
+        "notes": "Bb C Db Eb F Gb A"
+    },
+    {
+        "fundamental": "B",
+        "type": "Harmonic Minor",
+        "notes": "B C# D E F# G A#"
+    }
 ]
