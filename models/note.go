@@ -3,12 +3,14 @@ package models
 type Note struct {
 	Name       string
 	Enharmonic string
+	Tonality   string
 }
 
-func NewNote(name string) Note {
+func NewNote(name, tonality string) Note {
 	return Note{
 		Name:       name,
 		Enharmonic: enharmonic(name),
+		Tonality:   tonality,
 	}
 }
 

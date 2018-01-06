@@ -81,6 +81,10 @@ func main() {
 			Usage: "list only the natural minor scales",
 		},
 		cli.BoolFlag{
+			Name: "tonality, t",
+			Usage: "list notes from scales",
+		},
+		cli.BoolFlag{
 			Name:  "enharmonic, e",
 			Usage: "list notes from the scales with their enharmonics",
 		},
@@ -90,7 +94,7 @@ func main() {
 		if c.Bool("maj") {
 			fmt.Println("--- Major ---")
 			for _, scale := range majorScales {
-				scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
+				scale.CheckNotes(c.Args(), c.Bool("enharmonic"), c.Bool("tonality"))
 			}
 
 			return nil
@@ -98,7 +102,7 @@ func main() {
 		} else if c.Bool("min") {
 			fmt.Println("--- Natural Minor ---")
 			for _, scale := range naturalMinorScales {
-				scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
+				scale.CheckNotes(c.Args(), c.Bool("enharmonic"), c.Bool("tonality"))
 			}
 
 			return nil
@@ -111,22 +115,22 @@ func main() {
 
 		fmt.Println("--- Major ---")
 		for _, scale := range majorScales {
-			scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
+			scale.CheckNotes(c.Args(), c.Bool("enharmonic"), c.Bool("tonality"))
 		}
 
 		fmt.Println("--- Natural Minor ---")
 		for _, scale := range naturalMinorScales {
-			scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
+			scale.CheckNotes(c.Args(), c.Bool("enharmonic"), c.Bool("tonality"))
 		}
 
 		fmt.Println("--- Harmonic Minor ---")
 		for _, scale := range harmonicMinorScales {
-			scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
+			scale.CheckNotes(c.Args(), c.Bool("enharmonic"), c.Bool("tonality"))
 		}
 
 		fmt.Println("--- Melodic Minor ---")
 		for _, scale := range melodicMinorScales {
-			scale.CheckNotes(c.Args(), c.Bool("enharmonic"))
+			scale.CheckNotes(c.Args(), c.Bool("enharmonic"), c.Bool("tonality"))
 		}
 
 		return nil
